@@ -7,6 +7,5 @@ public class FloatDoubleExample {
 		//float f = 10.1f;
 		float f = 10.1F;//컴파일 에러 발생
 		double d = 10.2;//.이 들어가면 double 타입, float보다 더 큼, 둘 다 정확하지 않고 근사치인데 double이 더 가까움
-		
 	}
 }
