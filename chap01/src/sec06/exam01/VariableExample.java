@@ -9,5 +9,6 @@ public class VariableExample {
 		int value = 10;//type이 한번 정해지면 그것만 저장가능(변수타입 변수명 =)
 		int result = value + 12;
 		System.out.println(result);//읽기
+		
 	}
 }
