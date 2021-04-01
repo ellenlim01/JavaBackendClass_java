@@ -12,23 +12,24 @@ public class VendingMachineMission2 {
 
 		System.out.println("<메뉴>");
 		System.out.println("0. 종료");
-		int balance = 0;
+		int usePrice = 0;
 		for (int i = 0; i < menuArray.length; i++) {
-			System.out.printf("%d. %s (%,d원)\n", i + 1, menuArray[i], menuPriceArray[i]);
+			System.out.printf("%d. %s (%,d원)\n", (i + 1), menuArray[i], menuPriceArray[i]);
 		}
 		while (true) {
 			System.out.print("선택 > ");
 			int choice = scan.nextInt();
 			if(choice == 0) {
 				break;
-			} else if (choice>0 && choice<=menuArray.length) {
-				System.out.printf("%s를 선택하셨습니다.\n", menuArray[choice-1]);
-				balance += menuPriceArray[choice-1];
+			} else if (choice>0 && choice <=menuArray.length) {
+				int selectedIdx = choice-1;
+				System.out.printf("%s를 선택하셨습니다.\n", menuArray[selectedIdx]);
+				usePrice += menuPriceArray[selectedIdx];
 			} else {
 				System.out.println("잘 못 선택하셨습니다.");
 			}
 			System.out.println();
 		}
-		System.out.printf("종료 - 사용한 금액은 : %,d원", balance);
+		System.out.printf("종료 - 사용한 금액은 : %,d원", usePrice);
 	}
 }

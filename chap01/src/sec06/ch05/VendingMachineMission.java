@@ -42,7 +42,7 @@ public class VendingMachineMission {
 				System.out.println();
 			}
 		}
-		System.out.printf("종료\n 사용한 금액: %,d원\n 남은 금액", balance, money);
+		System.out.printf("종료\n 사용한 금액: %,d원\n 남은 금액: %d", balance, money);
 		scan.close();
 
 	}
