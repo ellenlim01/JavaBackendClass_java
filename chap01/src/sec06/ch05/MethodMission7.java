@@ -26,24 +26,44 @@ public class MethodMission7 {
 		scan.close();
 	}
 
-	public static String chk(String a, int b) {
+	public static String chk(String gender, int height) {
+//		String result = "평균";
+//		if (gender.equals("남")) {
+//			int manStand = 175;
+//			if (height < manStand) {
+//				result = "평균 미만";
+//			} else if (height > manStand) {
+//				result = "평균 초과";
+//			}
+//		} else if (gender.equals("여")) {
+//			int womanStand = 163;
+//			if (height < womanStand) {
+//				result = "평균 미만";
+//			} else if (height > womanStand) {
+//				result = "평균 초과";
+//			}
+//		}
+		int stand = 0;
 		String result = "평균";
-		if (a.equals("남")) {
-			int manStand = 175;
-			if (b < manStand) {
-				result = "평균 미만";
-			} else if (b > manStand) {
-				result = "평균 초과";
-			}
-		} else if (a.equals("여")) {
-			int womanStand = 163;
-			if (b < womanStand) {
-				result = "평균 미만";
-			} else if (b > womanStand) {
-				result = "평균 초과";
-			}
-		}
-		return ("성별: "+ a + ", 키: " + b + ", " + result);
 
+		switch (gender) {
+		case "여": case "여자":
+			stand = 163;
+			break;
+		case "남": case "남자":
+			stand = 175;
+			break;
+		default:
+			return "성별을 잘 못 입력하셨습니다.";
+		}
+
+		if (height > stand) {
+			result = "평균 초과";
+		} else if (height < stand) {
+			result = "평균 미만";
+		}
+		return String.format("성별: %s, 키: %dcm, %s", gender, height, result);
+		// System.out.printf();를 쓰면 return이 아닌 콘솔에 찍는 것을 목표로 함
+		// return "성별: "+ gender + ", 키: " + height + "cm, " + result;
 	}
 }
