@@ -11,7 +11,7 @@ public class MethodMission4 {
 
 		rNum = getRandomNum(5, 10);//5~10
 		System.out.println("rNum : " + rNum);
-		rNum = getRandomNum(10, 20);
+		rNum = getRandomNum(12, 14);
 		System.out.println("rNum : " + rNum);
 	}
 
