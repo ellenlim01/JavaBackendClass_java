@@ -9,7 +9,7 @@ public class StaticExam {
 		System.out.println("t1.name : " + t1.name);
 		t2.name = "Lotte";
 		
-		Toy.name = "SOC";
+		Toy.name = "SOC";;
 		System.out.println("t2.name : " + t2.name);
 		System.out.println("t1.name : " + t1.name);
 		System.out.println("Toy name : " + Toy.name);//주소값/클래스명으로 접근 가능
