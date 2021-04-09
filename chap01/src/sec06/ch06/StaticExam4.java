@@ -21,12 +21,12 @@ class CalcStatic2 {
 
 class CalcInstance2 {
 	static int num1;
-	static int num2; 
+	static int num2; //메소드 안에 없으면 전역변수
 	int sum() {
 		return num1 + num2;
 	}
-	static int sum(int n1, int n2) {
-		return n1 + n2;
+	static int sum(int num1, int num2) {//지역변수 전역변수 이름이 같을 수는 있음. 가장 가까운 아이 사용
+		return num1 + num2;//여기서 this를 쓸 수 없음
 	}
 }
 //static이 붙은 아이가 먼저 올라감

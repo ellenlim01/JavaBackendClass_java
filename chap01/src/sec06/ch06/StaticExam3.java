@@ -8,7 +8,7 @@ public class StaticExam3 {
 		int result = ci.sum(10,20);
 		System.out.println("result : " + result);
 		
-		int result2 = CalcStatic.sum(10, 30);
+		int result2 = CalcStatic.sum(10, 30);//static이 붙은 경우만 바로 호출 가능
 		System.out.println("result2 : " + result2);
 	}
 }
