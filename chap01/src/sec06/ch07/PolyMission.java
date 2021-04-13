@@ -23,6 +23,6 @@ public class PolyMission {
 			((Bus) a).openDoor();
 		} else {
 			a.hoot();
-		}
+		}//return이 있으면 else를 쓰지 않아도 됨36
 	}
 }
